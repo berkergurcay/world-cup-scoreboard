@@ -24,4 +24,13 @@ public class WorldCupScoreboardTest {
         scoreboard.startGame(game);
         assertEquals(new Score(0,0),scoreboard.getScore(game));
     }
+
+    @Test
+    public void testGameFinish(){
+        Scoreboard scoreboard = new Scoreboard();
+        Game game = new Game("FC Barcelona","Real Madrid");
+        scoreboard.startGame(game);
+        scoreboard.finishGame(game);
+        assertFalse(scoreboard.getGames().contains(game));
+    }
 }
