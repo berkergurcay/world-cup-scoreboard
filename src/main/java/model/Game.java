@@ -1,39 +1,17 @@
 package model;
 
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Game {
-    private int homeScore;
-    private int awayScore;
-    private boolean live;
 
     private String homeTeam;
     private String awayTeam;
-    private LocalDateTime startDate;
 
-    public int getHomeScore() {
-        return homeScore;
-    }
+    private Score score;
 
-    public void setHomeScore(int homeScore) {
-        this.homeScore = homeScore;
-    }
-
-    public int getAwayScore() {
-        return awayScore;
-    }
-
-    public void setAwayScore(int awayScore) {
-        this.awayScore = awayScore;
-    }
-
-    public boolean isLive() {
-        return live;
-    }
-
-    public void setLive(boolean live) {
-        this.live = live;
+    public Game(String homeTeam, String awayTeam) {
+        this.homeTeam = homeTeam;
+        this.awayTeam = awayTeam;
     }
 
     public String getHomeTeam() {
@@ -52,16 +30,8 @@ public class Game {
         this.awayTeam = awayTeam;
     }
 
-    public LocalDateTime getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(LocalDateTime startDate) {
-        this.startDate = startDate;
-    }
-
-    public void start(){
-        this.live = true;
+    public Score getScore(){
+       return score;
     }
 
     @Override
@@ -69,11 +39,11 @@ public class Game {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Game game = (Game) o;
-        return homeTeam.equals(game.homeTeam) && awayTeam.equals(game.awayTeam) && startDate.equals(game.startDate);
+        return homeTeam.equals(game.homeTeam) && awayTeam.equals(game.awayTeam);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(homeTeam, awayTeam, startDate);
+        return Objects.hash(homeTeam, awayTeam);
     }
 }
