@@ -16,4 +16,12 @@ public class WorldCupScoreboardTest {
         assertEquals(score,score1);
         assertNotEquals(score2,score3);
     }
+
+    @Test
+    public void testGameStart(){
+        Scoreboard scoreboard = new Scoreboard();
+        Game game = new Game("FC Barcelona","Real Madrid");
+        scoreboard.startGame(game);
+        assertEquals(new Score(0,0),scoreboard.getScore(game));
+    }
 }

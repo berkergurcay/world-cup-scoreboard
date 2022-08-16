@@ -12,6 +12,7 @@ public class Game {
     public Game(String homeTeam, String awayTeam) {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
+        this.score = new Score();
     }
 
     public String getHomeTeam() {
