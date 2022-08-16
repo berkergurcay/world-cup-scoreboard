@@ -33,4 +33,8 @@ public class Scoreboard {
     public void finishGame(Game game) {
         games.remove(game);
     }
+
+    public void updateGame(Game game, Score score) {
+        game.setScore(score);
+    }
 }

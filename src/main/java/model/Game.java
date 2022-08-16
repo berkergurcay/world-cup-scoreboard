@@ -35,6 +35,10 @@ public class Game {
        return score;
     }
 
+    public void setScore(Score score) {
+        this.score = score;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -47,4 +51,6 @@ public class Game {
     public int hashCode() {
         return Objects.hash(homeTeam, awayTeam);
     }
+
+
 }
