@@ -3,7 +3,8 @@ package model;
 public class Game {
     private int homeScore;
     private int awayScore;
-    public boolean live = true;
+    private boolean live = true;
+
 
     public int getHomeScore() {
         return homeScore;
@@ -20,4 +21,13 @@ public class Game {
     public void setAwayScore(int awayScore) {
         this.awayScore = awayScore;
     }
+
+    public boolean isLive() {
+        return live;
+    }
+
+    public void setLive(boolean live) {
+        this.live = live;
+    }
+
 }
