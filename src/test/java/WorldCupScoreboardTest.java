@@ -42,4 +42,14 @@ public class WorldCupScoreboardTest {
         scoreboard.updateGame(game,new Score(3,2));
         assertEquals(new Score(3,2),scoreboard.getScore(game));
     }
+
+    @Test
+    public void testUpdateFinishedGameScore(){
+        Scoreboard scoreboard = new Scoreboard();
+        Game game = new Game("FC Barcelona","Real Madrid");
+        scoreboard.startGame(game);
+        scoreboard.finishGame(game);
+        scoreboard.updateGame(game,new Score(3,2));
+        assertEquals(new Score(0,0),scoreboard.getScore(game));
+    }
 }

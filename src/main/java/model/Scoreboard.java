@@ -23,7 +23,6 @@ public class Scoreboard {
 
     public void startGame(Game game) {
         games.add(game);
-
     }
 
     public Score getScore(Game game) {
@@ -31,10 +30,14 @@ public class Scoreboard {
     }
 
     public void finishGame(Game game) {
-        games.remove(game);
+        if(games.contains(game)){
+            games.remove(game);
+        }
     }
 
     public void updateGame(Game game, Score score) {
-        game.setScore(score);
+        if(games.contains(game)){
+            game.setScore(score);
+        }
     }
 }
