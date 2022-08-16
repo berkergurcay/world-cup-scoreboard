@@ -1,6 +1,22 @@
 package model;
 
 public class Game {
-    public int homeScore;
-    public int awayScore;
+    private int homeScore;
+    private int awayScore;
+
+    public int getHomeScore() {
+        return homeScore;
+    }
+
+    public void setHomeScore(int homeScore) {
+        this.homeScore = homeScore;
+    }
+
+    public int getAwayScore() {
+        return awayScore;
+    }
+
+    public void setAwayScore(int awayScore) {
+        this.awayScore = awayScore;
+    }
 }
