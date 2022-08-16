@@ -15,6 +15,23 @@ public class Score {
         this.away = away;
     }
 
+
+    public int getHome() {
+        return home;
+    }
+
+    public void setHome(int home) {
+        this.home = home;
+    }
+
+    public int getAway() {
+        return away;
+    }
+
+    public void setAway(int away) {
+        this.away = away;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

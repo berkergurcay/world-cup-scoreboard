@@ -1,7 +1,9 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Scoreboard {
 
@@ -40,4 +42,10 @@ public class Scoreboard {
             game.setScore(score);
         }
     }
+
+    public List<Game> getSummary() {
+        return games.stream().sorted(Comparator.comparing(
+                Game::getTotalScore).reversed()).collect(Collectors.toList());
+    }
+
 }

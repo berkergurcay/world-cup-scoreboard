@@ -39,6 +39,10 @@ public class Game {
         this.score = score;
     }
 
+    public int getTotalScore(){
+        return score.getAway() + score.getHome();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -52,5 +56,12 @@ public class Game {
         return Objects.hash(homeTeam, awayTeam);
     }
 
-
+    @Override
+    public String toString() {
+        return "Game{" +
+                "homeTeam='" + homeTeam + '\'' +
+                ", awayTeam='" + awayTeam + '\'' +
+                ", score=" + score +
+                '}';
+    }
 }
