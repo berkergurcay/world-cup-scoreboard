@@ -6,7 +6,7 @@ import java.util.Objects;
 public class Game {
     private int homeScore;
     private int awayScore;
-    private boolean live = true;
+    private boolean live;
 
     private String homeTeam;
     private String awayTeam;
@@ -58,6 +58,10 @@ public class Game {
 
     public void setStartDate(LocalDateTime startDate) {
         this.startDate = startDate;
+    }
+
+    public void start(){
+        this.live = true;
     }
 
     @Override

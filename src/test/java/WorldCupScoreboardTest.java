@@ -26,7 +26,8 @@ public class WorldCupScoreboardTest {
     @Test
     public void testGameLive(){
         Game game = new Game();
-        assertEquals(true,game.isLive());
+        game.start();
+        assertTrue(game.isLive());
     }
 
     @Test
